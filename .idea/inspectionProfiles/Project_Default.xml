@@ -1,0 +1,86 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="get" />
+            <item index="1" class="java.lang.String" itemvalue="%}" />
+            <item index="2" class="java.lang.String" itemvalue="align:center;" />
+            <item index="3" class="java.lang.String" itemvalue="user.is_authenticated" />
+            <item index="4" class="java.lang.String" itemvalue="{%" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="13">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="body" />
+            <item index="7" class="java.lang.String" itemvalue="form" />
+            <item index="8" class="java.lang.String" itemvalue="style" />
+            <item index="9" class="java.lang.String" itemvalue="p" />
+            <item index="10" class="java.lang.String" itemvalue="a" />
+            <item index="11" class="java.lang.String" itemvalue="td" />
+            <item index="12" class="java.lang.String" itemvalue="tr" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="Django" />
+            <item index="1" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="2" class="java.lang.String" itemvalue="django-taggit" />
+            <item index="3" class="java.lang.String" itemvalue="python-telegram-bot" />
+            <item index="4" class="java.lang.String" itemvalue="Pillow" />
+            <item index="5" class="java.lang.String" itemvalue="aiowhatsapp" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N802" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="int.int" />
+          <option value="str.__setitem__" />
+          <option value="map.replace" />
+          <option value="int.sort" />
+          <option value="int.__getitem__" />
+          <option value="list.__getitem__" />
+          <option value="list.rindex" />
+          <option value="int.pop" />
+          <option value="int.append" />
+          <option value="list.split" />
+          <option value="list.add" />
+          <option value="str.decode" />
+          <option value="list.__sub__" />
+          <option value="list.index" />
+          <option value="list.find" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
