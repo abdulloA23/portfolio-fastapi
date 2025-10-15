@@ -9,11 +9,9 @@ model_name = "gemini-2.0-flash"
 
 def resumeCorrect(text: str):
     try:
-        # Генерация контента через API
         response = client.models.generate_content(
             model=model_name, contents=resumePrompt(text)
         )
-        # Пробуем распарсить JSON (обрезаем лишние символы если нужно)
         try:
             result_json = json.loads(response.text[8:-3])
         except json.JSONDecodeError:
@@ -22,5 +20,4 @@ def resumeCorrect(text: str):
         return {"response": result_json}
     
     except Exception as e:
-        # Ловим любые ошибки (сеть, API, таймауты)
         return {"error": f"Failed to process resume: {str(e)}"}

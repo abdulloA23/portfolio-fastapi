@@ -9,10 +9,8 @@ import numpy as np
 import tempfile
 from fastapi import File, UploadFile
 
-# Путь к Tesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
-# Языки Tesseract
 tessdata_dir = r"C:\Program Files\Tesseract-OCR\tessdata"
 langs = [f.replace(".traineddata", "") for f in os.listdir(tessdata_dir) if f.endswith(".traineddata")]
 langs_str = "+".join(langs) if langs else "eng"  # fallback на eng
@@ -20,10 +18,8 @@ langs_str = "+".join(langs) if langs else "eng"  # fallback на eng
 
 def preprocess_image(image_path):
     try:
-        # Загружаем изображение
         image = cv2.imread(image_path)
         
-        # Предобработка: преобразуем в оттенки серого и бинаризуем
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
         
@@ -54,12 +50,9 @@ async def extractText(file: UploadFile = File(...)):
         elif ext in ["docx", "doc"]:
             text = await asyncio.to_thread(docx2txt.process, tmp_path)
         elif ext in ["jpg", "jpeg", "png"]:
-            # Улучшаем изображение
             enhanced_img = await asyncio.to_thread(preprocess_image, tmp_path)
-            # Конвертируем обратно в PIL для Tesseract
             pil_img = Image.fromarray(enhanced_img)
             pil_img.show()
-            # OCR
             custom_config = r'--oem 3 --psm 6'
             text = await asyncio.to_thread(pytesseract.image_to_string, pil_img, lang=langs_str,config=custom_config)
         else:
