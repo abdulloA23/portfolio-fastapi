@@ -96,12 +96,6 @@ jmespath==1.0.1
 joblib==1.5.2
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
-kivi==0.2.8
-Kivy==2.3.1
-kivy-deps.angle==0.4.0
-kivy-deps.glew==0.3.1
-Kivy-Garden==0.1.5
-kivy_deps.sdl2==0.8.0
 kombu==5.4.2
 l18n==2021.3
 lazy_loader==0.4
