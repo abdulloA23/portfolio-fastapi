@@ -1,9 +1,12 @@
 from google import genai
 import json
+import os
 from fastapi.responses import JSONResponse
 from .prompts import resumePrompt
 
-client = genai.Client(api_key="AIzaSyDMIL5X0R_YEt8a0jzvi0lNHXFnK7Y7JTM")
+# Используем переменную окружения
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+client = genai.Client(api_key=GEMINI_API_KEY)
 model_name = "gemini-2.0-flash"
 
 

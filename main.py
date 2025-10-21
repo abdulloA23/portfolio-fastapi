@@ -88,3 +88,5 @@ async def extract(file: UploadFile = File(...)):
     if 'error' in result:
         return JSONResponse({'error': result['error'], 'raw': result.get('raw', '')}, status_code=500)
     return JSONResponse({'response': result['response']}, status_code=200)
+
+#MdhlmTKWG8JXk
